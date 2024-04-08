@@ -17,7 +17,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.mainView}>
-      <View>
+      <View style={styles.logoBg}>
         <Image source={imdbLogo} style={styles.logo} />
       </View>
       <View style={styles.container}>
@@ -35,18 +35,20 @@ export default function App() {
 
 const styles = StyleSheet.create({
   mainView: {
-    flex: 1,
     marginTop: Platform.OS === "ios" ? 0 : Constants.statusBarHeight,
   },
   container: {
     backgroundColor: "black",
     padding: 10,
   },
-  logo: {
-    height: 50,
-    width: 50,
-    marginLeft: 30,
+  logoBg: {
     backgroundColor: "#393939",
+  },
+  logo: {
+    height: 70,
+    width: 70,
+    marginLeft: 10,
+    resizeMode: "contain",
   },
   title: {
     fontSize: 30,
