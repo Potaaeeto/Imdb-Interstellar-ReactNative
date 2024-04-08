@@ -31,6 +31,8 @@ export default function App() {
         <View style={styles.logoBg}>
           <Image source={imdbLogo} style={styles.logo} />
         </View>
+
+        {/* MAIN */}
         <View style={styles.container}>
           <View
             style={{
@@ -39,6 +41,7 @@ export default function App() {
               marginBottom: 20,
             }}
           >
+            {/* TITLE */}
             <Text style={styles.title}>Interstellar</Text>
             <View style={{ flexDirection: "row", gap: 10, marginBottom: 20 }}>
               <Text style={styles.paragraph}>2014</Text>
@@ -46,6 +49,8 @@ export default function App() {
               <Text style={styles.paragraph}>2h 49min</Text>
               <Text style={styles.paragraph}>Adventure, Drama, Sci-Fi</Text>
             </View>
+
+            {/* DESCRIPTION */}
             <View style={styles.description}>
               <Image source={interstellarPoster} style={styles.poster} />
               <View style={{ flex: 1 }}>
@@ -69,35 +74,51 @@ export default function App() {
                 </Pressable>
               </View>
             </View>
+
+            {/* RATINGS CONTAINER */}
             <View
               style={{
                 flexDirection: "row",
                 justifyContent: "space-around",
               }}
             >
+              {/* STARS */}
               <View
                 style={{
                   alignItems: "center",
                   gap: 3,
+                  // borderColor: "red",
+                  // borderWidth: 2,
+                  width: 100,
                 }}
               >
                 <AntDesign name="star" size={25} color="#C5A330" />
                 <Text style={{ color: "white" }}>8.6/10</Text>
                 <Text style={styles.paragraph}>1.1M</Text>
               </View>
+
+              {/* RATE THIS */}
               <View
                 style={{
                   alignItems: "center",
                   gap: 5,
+                  // borderColor: "red",
+                  // borderWidth: 2,
+                  width: 100,
                 }}
               >
                 <AntDesign name="staro" size={25} color="white" />
                 <Text style={{ color: "white" }}>RATE THIS</Text>
               </View>
+
+              {/* METASCORE */}
               <View
                 style={{
                   alignItems: "center",
                   gap: 2,
+                  // borderColor: "red",
+                  // borderWidth: 2,
+                  width: 100,
                 }}
               >
                 <Text
@@ -110,7 +131,9 @@ export default function App() {
                   74
                 </Text>
                 <Text style={{ color: "white" }}>Metascore</Text>
-                <Text style={styles.paragraph}>46 critic reviews</Text>
+                <Text numberOfLines={1} style={styles.paragraph}>
+                  46 critic reviews
+                </Text>
               </View>
             </View>
           </View>
@@ -226,6 +249,9 @@ const styles = StyleSheet.create({
     width: 70,
     marginLeft: 10,
     resizeMode: "contain",
+    // resizeMode: "cover",
+    // width: 155,
+    // height: 75,
   },
   title: {
     fontSize: 30,
